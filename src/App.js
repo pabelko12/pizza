@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import './scss/app.scss'
 import {Header} from "./components/Header";
 
@@ -16,13 +16,13 @@ function App() {
         <div className="App">
             <div className="wrapper">
                 <Header/>
-                <div className="content">
+
                    <Routes>
                        <Route path='/' element={<Home/>}/>
                        <Route path='/Cart' element={<Cart/>}/>
                        <Route path='*' element={<NotFound/>}/>
                    </Routes>
-                </div>
+
             </div>
         </div>
     );
