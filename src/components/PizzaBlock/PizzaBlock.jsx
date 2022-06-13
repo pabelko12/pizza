@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
 
-export function PizzaBlock({title, price, imageUrl, sizes, types}) {
+export function PizzaBlock({name, price, imageUrl, sizes, types}) {
+
     const [numberOfPizza, setNumberOfPizza] = useState(0)
     const onClickAdd = () => {
-        console.log(numberOfPizza)
         setNumberOfPizza(numberOfPizza + 1)
     }
     const typeName = ['тонкое', 'традиционное']
@@ -18,7 +18,7 @@ export function PizzaBlock({title, price, imageUrl, sizes, types}) {
                     src={imageUrl}
                     alt="Pizza"
                 />
-                <h4 className="pizza-block__title">{title}</h4>
+                <h4 className="pizza-block__title">{name}</h4>
                 <div className="pizza-block__selector">
                     <ul>
                         {types.map((typeID) => (
