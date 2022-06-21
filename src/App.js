@@ -6,22 +6,22 @@ import {Header} from "./components/Header";
 import {Home} from "./pages/Home";
 import {Cart} from "./pages/Cart";
 import {NotFound} from "./pages/NotFound";
-import {Routes, Route,} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 
 function App() {
-
+    const [searchValue, setSearchValue] = React.useState('')
 
     return (
         <div className="App">
             <div className="wrapper">
-                <Header/>
+                <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
 
-                   <Routes>
-                       <Route path='/' element={<Home/>}/>
-                       <Route path='/Cart' element={<Cart/>}/>
-                       <Route path='*' element={<NotFound/>}/>
-                   </Routes>
+                <Routes>
+                    <Route path='/' element={<Home searchValue={searchValue}/>}/>
+                    <Route path='/Cart' element={<Cart/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+                </Routes>
 
             </div>
         </div>
