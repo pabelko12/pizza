@@ -1,10 +1,13 @@
 import React from "react";
 
 import styles from './NotFoundBlock.module.scss'
+import {SearchContext} from "../../App";
 
 
 export const NotFoundBlock = () => {
-    return (
+
+    return(
+
         <div className={styles.root}>
             <h1>
                 <span>😕</span>
